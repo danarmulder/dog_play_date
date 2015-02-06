@@ -1,21 +1,19 @@
 <div class="ui page grid">
   <div class="row">
     <div class="column">
-      <div class="ui segment image-div">
-        <h1 class= "ui inverted huge header">
-          <span class = "left aligned vertical center">DOG PLAY DAYS</span>
+      <div class="ui segment image-div ">
+        <h1 class= "ui inverted massive header">
+          <p>DOG DATES</p>
         </h1>
-        <h1 class = "ui inverted huge header">
-          <span class="text"> Every dog needs</span><b data-text="User Interface"> friends</b>
-        </h1>
+        <h3 class="ui inverted huge header">
+          <p>Every Dog </p>
+          <p>Needs Friends...</p>
           <%= link_to "Sign Up", signup_path, class:"ui huge teal button" %>
+        </h3>
       </div>
     </div>
   </div>
 </div>
-
-
-<%= @length %>
 
 <div class="ui three column padded page grid">
 
@@ -39,8 +37,8 @@
           <div class="meta">
             Adoring Human: <%= link_to dog.user.name, user_path(dog.user), class: "group" %>
           </div>
-          <div class="description"><%= dog.bio %>...<span class="more-info" data-dog-id=<%="#{dog.id}"%> >more</span>
-            <div class="inactive">
+          <div class="description" data-dog-id=<%="#{dog.id}"%>><%= dog.bio %>...<span><strong>more</strong></span>
+            <div class="inactive" id="more-info">
               <ul>
                 <li><strong>Breed: </strong> <%= dog.breed %> </li>
                 <li><strong>Age: </strong> <%= dog.age %></li>
